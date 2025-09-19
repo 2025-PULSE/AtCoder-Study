@@ -13,7 +13,7 @@
 
   채점 결과 : `AC(accepted)` `TLE(Time Limit Exceeded)` `MLE(Memory Limit Exceeded)` `WA(Wrong Answer)`
 
-  *commit 메세지 ⇒ **`문제: [채첨결과]`***
+  *commit 메세지 ⇒ **`문제: [채점 결과]`***
   
   *ex) `A: AC`*
 
