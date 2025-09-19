@@ -1,6 +1,6 @@
-# 2025_2_PLUSE_B_ATCODER-STUDY
+# 2025_2_PLUSE_ATCODER-STUDY
 
-- **스터디 방식**
+## 스터디 방식
 
 1. 이 저장소(repository)를 fork 하여 자신의 원격 저장소로 복사해 갑니다.
 2. 생성된 원격 저장소에 대회 이름에 맞는 폴더에 github_ID로 폴더를 만들고 그 안에 소스코드를 올립니다.
@@ -9,9 +9,7 @@
 5. 대회가 끝나면 모든 문제를 commit 후 PR(pull request)합니다.
 6. 대회가 끝나고 24시간 이내에 다른 사람들의 PR을 보고 코드 리뷰를 코멘트로 답니다.
 
-[주의] 기존 폴더를 지우지 않게 조심하시고, 개인 폴더 내부만 수정해주세요.
-
-- **commit 규칙**
+- ### commit 규칙
 
   채점 결과 : `AC(accepted)` `TLE(Time Limit Exceeded)` `MLE(Memory Limit Exceeded)` `WA(Wrong Answer)`
 
@@ -19,7 +17,7 @@
   
   *ex) A: AC*
 
-- **PR 규칙**
+- ### PR 규칙
 
   *PR 제목 ⇒ 대회 이름 / GithubId*
   
@@ -27,7 +25,7 @@
   
   comment는 각 문제마다 풀이 방법과 어려웠던 내용을 설명합니다.
 
-- **코드리뷰**
+- ### 코드리뷰
 
   PR에서 리뷰를 합니다. 코드의 각 줄에 리뷰를 해도 좋고, 전체 코드에 대한 느낀점이나 배운점을 작성해도 좋습니다.
 
@@ -44,7 +42,7 @@ git clone https://github.com/[본인 Github 아이디]/AtCoder-Study
 ### 로컬에서 파일 저장 후 원격 저장소로 올리기
 
 ```bash
-git add A.cpp
+git add [본인 코드가 포함된 상대 경로] e.g. git add ABC423/cnvxlns/A.cpp
 
 git commit -m "A: AC"
 
