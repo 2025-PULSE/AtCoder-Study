@@ -38,7 +38,7 @@ void Solve() {
     cin >> N >> M >> K;
     vi A(N, M);
     REP(i, K){
-        int a, b; 
+        int a, b; //변수 b가 풀이에 사용되지 않았음, 그래도 되게끔 입력이 설계되어 있음
         cin >> a >> b;
         A[a - 1]--;
         if(A[a - 1] <= 0){
