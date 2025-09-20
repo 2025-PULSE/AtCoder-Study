@@ -42,6 +42,7 @@ void Solve() {
         cin >> a;
         A.push({a, 1});
     }
+    //thanks to 강현택
     for(auto i = K; i > 0;){
         auto [topval, topcnt] = A.top();
         A.pop();
@@ -63,6 +64,8 @@ void Solve() {
     }
     cout << fixed << setprecision(9) << ans << endl;
 }
+
+//정해는 binsearch가 맞긴한데 이게 더 쉽긴 한듯?
 
 int32_t main() {
     cin.tie(0) -> ios::sync_with_stdio(0);
