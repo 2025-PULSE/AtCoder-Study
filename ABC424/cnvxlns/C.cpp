@@ -63,11 +63,11 @@ void Solve() {
         }else{
             G[x].push_back(i);
             G[y].push_back(i);
-        }
+        }//단방향 그래프로 재구성 해주고
     }
     int ans = 0;
     for(const auto &s : start){
-        ans += dfs(s);
+        ans += dfs(s); // dfs돌리면서 연결된 노드 개수 세주기
     }
     cout << ans << endl;
 }
