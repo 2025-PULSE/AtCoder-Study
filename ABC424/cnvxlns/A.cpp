@@ -36,7 +36,7 @@ pii dxy[] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 void Solve() {
     int a, b, c;
     cin >> a >> b >> c;
-    if(a == b || b == c || c == a) {
+    if(a == b || b == c || c == a) { //이등변 삼각형 조건, 삼각형이 성립하는지 따져야 되나 생각해보긴 했는데 굳이?
         cout << "Yes" << endl;
     } else {
         cout << "No" << endl;
