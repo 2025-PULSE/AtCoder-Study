@@ -34,11 +34,32 @@ pii dxy[] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 
 
 void Solve() {
-    int x, c;
-    cin >> x >> c;
-    int ans = x / (1000 + c) * 1000;
+    int N;
+    cin >> N;
+    vi L(N);
+    for(auto &x : L) {
+        cin >> x;
+    }
+    int ans = N + 1;
+    for(auto i = 0; i < N; ++i){
+        ans--;
+        if(L[i] == 0){
+            
+        }else{
+            break;
+        }
+    }
+    for(auto i = N - 1; i >= 0; --i){
+        ans--;
+        if(L[i] == 0){
+            
+        }else{
+            break;
+        }
+    }
+    if(ans < 0) ans = 0;
     cout << ans << endl;
-}
+}   
 
 int32_t main() {
     ios::sync_with_stdio(0);

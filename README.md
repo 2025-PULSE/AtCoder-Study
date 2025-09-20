@@ -15,13 +15,16 @@
 
   채점 결과 : `AC(accepted)` `TLE(Time Limit Exceeded)` `MLE(Memory Limit Exceeded)` `WA(Wrong Answer)`
 
-  commit 메세지: 문제: [채첨결과]
-  ex) A: AC
+  *commit 메세지 ⇒ 문제: [채첨결과]*
+  
+  *ex) A: AC*
 
 - **PR 규칙**
 
-  PR 제목: 대회 이름 / GithubId  
-  ex) ABC423 / dib3474  
+  *PR 제목 ⇒ 대회 이름 / GithubId*
+  
+  *ex) ABC423 / dib3474*
+  
   comment는 각 문제마다 풀이 방법과 어려웠던 내용을 설명합니다.
 
 - **코드리뷰**
@@ -41,7 +44,7 @@ git clone https://github.com/[본인 Github 아이디]/AtCoder-Study
 ### 로컬에서 파일 저장 후 원격 저장소로 올리기
 
 ```bash
-git add A.cpp
+git add [본인 코드가 포함된 상대 경로] e.g. git add ABC423/cnvxlns/A.cpp
 
 git commit -m "A: AC"
 

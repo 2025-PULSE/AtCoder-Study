@@ -34,11 +34,45 @@ pii dxy[] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 
 
 void Solve() {
-    int x, c;
-    cin >> x >> c;
-    int ans = x / (1000 + c) * 1000;
-    cout << ans << endl;
-}
+    int N, R;
+    cin >> N >> R;
+    vi L(N);
+    for(auto &x : L) {
+        cin >> x;
+    }
+    int ans = 0;
+    int streak = 1;
+    int firstone = N;
+    int lastone = 0;
+    for(auto i = 0; i < N; ++i){
+        if(streak == 1 && L[i] == 0){
+            firstone = i - 1;
+            streak = 0;
+        }
+        if(L[i] == 0){
+            streak = 0;
+            ans++;
+        }
+    }
+    for(auto i = N - 1; i >= 0; --i){
+        if(L[i] == 0){
+            lastone = i + 1;
+            break;
+        }
+    }
+    for(auto i = R - 1; i >= 0 && i > firstone; i--){
+        if(L[i] == 1){
+            ans += 2;
+        }
+    }
+    for(auto i = R; i < N && i < lastone; i++){
+        if(L[i] == 1){
+            ans += 2;
+        }
+    }
+    //cout << firstone << sp << lastone << endl;
+    cout  << ans << endl;
+}   
 
 int32_t main() {
     ios::sync_with_stdio(0);
