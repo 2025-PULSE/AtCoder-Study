@@ -1,0 +1,6 @@
+import sys
+input = lambda: sys.stdin.readline().rstrip()
+
+s = sorted(map(int, input().split()))
+
+print("Yes" if s[0] == s[1] or s[1] == s[2] else "No")
