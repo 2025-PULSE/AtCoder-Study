@@ -1,47 +1,35 @@
 #include <iostream>
-#include <tuple>
 #include <vector>
 using namespace std;
 
 int main() {
-    int N, Q, tmp, tmp1, tmp2;
-    vector<int> A;
-    typedef tuple<int, int, int> t;
-    vector<t> query;
+    int N, Q, c, l, r;
+    vector<long long> A;
+    vector<long long> prefix_sum;
 
     cin >> N >> Q;
-    A.reserve(N+1);
+    A.reserve(2*N);
     for (int i=0; i<N; ++i) {
-        cin >> tmp;
-        A.push_back(tmp);
+        cin >> A[i];
+        A[N+i] = A[i];
     }
 
-    query.reserve(Q);
+    prefix_sum.resize(2*N + 1);
+    for (int i=0; i<2*N; ++i) {
+        prefix_sum[i+1] = prefix_sum[i] + A[i];
+    }
+
+    int offset = 0;
     for (int i=0; i<Q; ++i) {
-        cin >> tmp;
-        if (tmp == 1) {
-            cin >> tmp1;
-            query.emplace_back(tmp, tmp1, 0);
+        int query_type;
+        cin >> query_type;
+        if (query_type == 1) {
+            cin >> c;
+            offset = (offset+c) % N;
         }
         else {
-            cin >> tmp1 >> tmp2;
-            query.emplace_back(tmp, tmp1, tmp2);
-        }
-    }
-
-    for (auto q : query) {
-        if (get<0>(q) == 1) {
-            while (get<1>(q)--) {
-                A.push_back(A.front());
-                A.erase(A.begin());
-            }
-        }
-        else {
-            int sum = 0;
-            for (int i=get<1>(q)-1; i<get<2>(q); ++i) {
-                sum += A[i];
-            }
-            cout << sum << endl;
+            cin >> l >> r;
+            cout << prefix_sum[offset + r] - prefix_sum[offset + l - 1] << '\n';
         }
     }
 }
