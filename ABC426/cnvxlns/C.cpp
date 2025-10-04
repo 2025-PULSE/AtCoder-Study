@@ -40,6 +40,7 @@ void Solve() {
     for(auto i = 1; i <= N; ++i){
         m[i] = 1;
     }
+    
     int xmax = 0;
     while(Q--){
         int x, y;
