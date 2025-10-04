@@ -32,7 +32,6 @@ pii operator-(const pii& a, const pii& b) {
 
 pii dxy[] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 
-
 void Solve() {
     int N, Q;
     cin >> N >> Q;
