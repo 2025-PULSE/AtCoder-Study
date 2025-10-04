@@ -42,6 +42,7 @@ int f(string s){
     if(s == "Lynx"){
         return 2;
     }
+    
 }
 
 void Solve() {
