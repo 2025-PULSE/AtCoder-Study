@@ -7,18 +7,41 @@ T = int(input())
 for _ in range(T):
     n = int(input())
     s = input().strip()
-
-    blocks = 1
-    for i in range(1, n):
-        if s[i] != s[i-1]:
-            blocks += 1
     
-    if s[0] == s[-1]:
-        print((blocks - 1) * 2)
-    else:
-        print(blocks)
- 
+    if len(set(s)) == 1:
+        print(0)
+        continue
+    
+    cnt0 = s.count('0')
+    cnt1 = s.count('1')
+    
+    length = 0
+    Max0 = 0
+    for i in s:
+        if i == "0":
+            length += 1
+            Max0 = max(length, Max0)
+        else:
+            length = 0
+
+    length = 0
+    Max1 = 0
+    for i in s:
+        if i == "1":
+            length += 1
+            Max1 = max(length, Max1)
+        else:
+            length = 0
+
+    Zero = 2*(cnt0 - Max0) + cnt1
+    One = 2*(cnt1 - Max1) + cnt0
+    print(min(Zero, One))
+
+    
 """
+0 1 => two dummy
+    => ans += minimum
+
 01001
 0 1 00 1
 
