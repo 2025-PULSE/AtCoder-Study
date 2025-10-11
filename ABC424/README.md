@@ -1,3 +1,3 @@
 # ABC424
 
-일정 : 2025-09-20 21:00 ~22:40
+Contest Duration: 2025-09-20(Sat) 21:00 - 2025-09-20(Sat) 22:40 (local time) (100 minutes)
